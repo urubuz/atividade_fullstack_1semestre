@@ -1,38 +1,32 @@
-canvas{
-    background-color: bisque;
-}
-body{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-.barra-superior {
-  width: 100%;
-  height: 70px;
-  background-color: #1B4332;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+body {
   display: flex;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #E5E7EB;
 }
 
-.titulo {  
-    color:white;
-    margin-top: 18px;   
-    font-size:25px;
-    font-weight: bold;
-    font-family:'Segoe UI';
-    transition: all 0.3s ease;
+.canvas-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 20px;
 }
 
-.titulo:hover{
-    color: #5cff9d;
-    transform: scale(1.03);
+.canvas-container h2 {
+  color: #1B4332;
 }
 
-.logo{
-    margin-left: 750px;
+#canvas {
+  background-color: bisque;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  cursor: crosshair;
+  max-width: 100%;
+}
+
+.canvas-info {
+  font-size: 14px;
+  color: #6b7280;
 }

@@ -1,0 +1,20 @@
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Archives (commit extracted files instead)
+*.zip
+
+# Node modules (if server is added later)
+node_modules/
+
+# Logs
+*.log

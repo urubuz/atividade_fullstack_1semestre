@@ -1,251 +1,137 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 30px;
 }
 
-.bodyhome{
-    font-family:'Segoe UI';
-    background-color: #E5E7EB;
-}
-
-.bodysobremim{
-    font-family:'Segoe UI';
-}
-
-.divisao1{
-    display: flex;
-}
-.divisao2{
-    display: flex;
-}
-.divisao3{
-    display: flex;
-}
-
-.barra-superior {
-  width: 100%;
-  height: 70px;
-  background-color: #1B4332;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+.card {
   display: flex;
-  text-align: center;
+  justify-content: space-between;
+  background-color: #2D6A4F;
+  height: 350px;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  color: white;
 }
 
-.titulo {  
-    color:white;
-    margin-top: 18px;   
-    font-size:25px;
-    font-weight: bold;
-    font-family:'Segoe UI';
-    transition: all 0.3s ease;
+.card:hover {
+  transform: scale(1.03);
+  border: 3px solid #5cff9d;
 }
 
-.titulo:hover{
-    color: #5cff9d;
-    transform: scale(1.03);
+.card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 10px;
 }
 
-
-.logo{
-    margin-left: 750px;
+.card-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
 }
 
-.logodivs{
-    margin-top: 40px;
-    margin-left: 40px;
+.card-title {
+  font-size: 22px;
+  font-weight: bold;
 }
 
-.titulodivs{
-    margin-left: 40px;
-    color:white;
-    margin-top: 15px;
+.card-text {
+  font-size: 14px;
+  opacity: 0.9;
 }
 
-.textodivs{
-    color:white;
-    margin-left: 40px;
+.card-image-wrapper {
+  display: flex;
+  align-items: flex-end;
 }
 
-.seçoes1{
-    background-color: #2D6A4F;
-    height: 350px;
-    width: 700px;
-    margin-top: 100px;
-    margin-left: 205px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.3s ease;
+.card-image {
+  width: 280px;
+  height: 350px;
+  object-fit: cover;
+  -webkit-mask-image: linear-gradient(to left, black 10%, transparent 100%);
+  mask-image: linear-gradient(to left, black 10%, transparent 100%);
+  border-radius: 0 15px 15px 0;
 }
 
-.seçoes1:hover {
-    transform: scale(1.03);
-    border: 3px solid #5cff9d;
-}
-
-.imagemdivs{
-    width: 350px;
-    height: 350px;
-    object-fit: cover;
-    -webkit-mask-image: linear-gradient(to left, black 10%, transparent 100%);
-    mask-image: linear-gradient(to left, black 10%, transparent 100%);
-    border-radius: 15px;
-    border-radius: 15px;
-    border-radius: 15px;
-}
-
-.seçoes2{
-    background-color: #2D6A4F;
-    height: 350px;
-    width: 700px;
-    margin-top: 100px;
-    margin-left: 100px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-}
-
-.seçoes2:hover {
-    transform: scale(1.03);
-    border: 3px solid #5cff9d;
-}
-
-.seçoes3{
-    background-color: #2D6A4F;
-    height: 350px;
-    width: 700px;
-    margin-top: 100px;
-    margin-left: 205px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-}
-
-.seçoes3:hover {
-    transform: scale(1.03);
-    border: 3px solid #5cff9d;
-}
-
-.seçoes4{
-    background-color: #2D6A4F;
-    height: 350px;
-    width: 700px;
-    margin-top: 100px;
-    margin-left: 100px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-}
-
-.seçoes4:hover {
-    transform: scale(1.03);
-    border: 3px solid #5cff9d;
-}
-
-.seçoes5{
-    background-color: #2D6A4F;
-    height: 350px;
-    width: 700px;
-    margin-top: 100px;
-    margin-left: 200px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-}
-
-.seçoes5:hover {
-    transform: scale(1.03);
-    border: 3px solid #5cff9d;
-}
-
-.seçoes6{
-    background-color: #2D6A4F;
-    height: 350px;
-    width: 700px;
-    margin-top: 100px;
-    margin-left: 100px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-}
-
-.seçoes6:hover {
-    transform: scale(1.03);
-    border: 3px solid #5cff9d;
-}
-
-.seçoes7{
-    background-color: #2D6A4F;
-    height: 350px;
-    width: 700px;
-    margin-top: 100px;
-    margin-left: 200px;
-    border-radius: 15px;
-    display: flex;
-    justify-content: space-between;
-    transition: all 0.3s ease;
-}
-
-.seçoes7:hover {
-    transform: scale(1.03);
-    border: 3px solid #5cff9d;
-}
-
-li{
-    font-weight: bold;
-}
-footer{
-    font-size: 5px;
-}
-
-.divjogo {
+.hero-banner {
   position: relative;
-  width: 1905px;
-  height: 800px;
+  width: 100%;
+  height: 300px;
   overflow: hidden;
 }
 
-.imgjogo{
-    position: absolute;
+.hero-bg {
+  position: absolute;
   inset: 0;
   background: url("imagens/videogame.png") center/cover;
   filter: blur(10px);
   transform: scale(1.1);
 }
 
-.divtextojogo {
+.hero-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 65px;
+  font-size: 60px;
   font-weight: bold;
+  text-align: center;
 }
 
-.titulopag{
-    font-weight: bold;
-    font-size: 30px;
-    text-align: center;
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  text-align: center;
 }
 
-.divsobremim{
-    text-align: center;
+.about-subtitle {
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #1B4332;
 }
-.textopag{
-    font-size: 15px;
-    text-align: center;
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  color: #374151;
 }
-.imagemdivs{
-    position: relative;
-    right:0;
+
+@media (max-width: 900px) {
+  .cards-grid {
+    grid-template-columns: 1fr;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .card-content {
+    padding: 25px;
+  }
+
+  .card-image-wrapper {
+    justify-content: center;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 200px;
+    mask-image: none;
+    -webkit-mask-image: none;
+    border-radius: 0;
+  }
 }

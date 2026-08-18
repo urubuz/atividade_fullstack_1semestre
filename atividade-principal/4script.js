@@ -1,27 +1,67 @@
-function irhome() {
-    window.location.href = "1home.html";
-  }
+const input = document.getElementById("input");
+const mensagem = document.getElementById("resultado");
+const tentativasEl = document.getElementById("tentativas");
+const btnVerificar = document.getElementById("btn-verificar");
+const btnNovo = document.getElementById("btn-novo");
 
-var i = Math.floor(Math.random() * 100) + 1;
+let numeroSecreto;
+let tentativas;
+
+function novoJogo() {
+  numeroSecreto = Math.floor(Math.random() * 100) + 1;
+  tentativas = 0;
+  input.value = "";
+  input.disabled = false;
+  input.style.borderColor = "transparent";
+  mensagem.textContent = "";
+  tentativasEl.textContent = "";
+  btnVerificar.style.display = "inline-block";
+  btnNovo.style.display = "none";
+  input.focus();
+}
 
 function verificar() {
-    let input = document.getElementById("input");
-    let valor = parseInt(input.value);
-    let mensagem = document.getElementById("resultado");
+  const valor = parseInt(input.value);
 
-    if (valor === i) {
-        input.style.border = "2px solid #6486f7";
-        mensagem.innerText = "Você acertou!";
-        mensagem.style.color = "#6486f7";
-    } 
-    else if (valor > i) {
-        input.style.border = "2px solid red";
-        mensagem.innerText = "O número é menor!";
-        mensagem.style.color = "red";
-    } 
-    else {
-        input.style.border = "2px solid red";
-        mensagem.innerText = "O número é maior!";
-        mensagem.style.color = "red";
-    }
+  if (isNaN(valor) || valor < 1 || valor > 100) {
+    mensagem.textContent = "Digite um número válido entre 1 e 100!";
+    mensagem.style.color = "#fbbf24";
+    input.style.borderColor = "#fbbf24";
+    return;
+  }
+
+  tentativas++;
+  tentativasEl.textContent = `Tentativas: ${tentativas}`;
+
+  if (valor === numeroSecreto) {
+    input.style.borderColor = "#5cff9d";
+    mensagem.textContent = `Você acertou em ${tentativas} tentativa(s)!`;
+    mensagem.style.color = "#5cff9d";
+    input.disabled = true;
+    btnVerificar.style.display = "none";
+    btnNovo.style.display = "inline-block";
+  } else if (valor > numeroSecreto) {
+    input.style.borderColor = "#ef4444";
+    mensagem.textContent = "O número é menor!";
+    mensagem.style.color = "#ef4444";
+  } else {
+    input.style.borderColor = "#ef4444";
+    mensagem.textContent = "O número é maior!";
+    mensagem.style.color = "#ef4444";
+  }
 }
+
+btnVerificar.addEventListener("click", verificar);
+btnNovo.addEventListener("click", novoJogo);
+
+input.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    if (btnVerificar.style.display !== "none") {
+      verificar();
+    } else {
+      novoJogo();
+    }
+  }
+});
+
+novoJogo();

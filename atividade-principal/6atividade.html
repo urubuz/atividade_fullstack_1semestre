@@ -1,20 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Animação - Canvas - Atividade 6</title>
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="6style.css">
 </head>
+
 <body>
     <header class="barra-superior">
-        <br>    
-        <img src="imagens/logo urubu.png" alt="Logo"  width="75px" height="75px" class="logo">
-        <p onclick="irhome()" class="titulo">RAFAELmagalhães_barreto</p>
+        <a href="1home.html">
+            <img src="imagens/logo urubu.png" alt="Logo Urubu" class="logo">
+        </a>
+        <a href="1home.html" class="titulo">RAFAELmagalhães_barreto</a>
     </header>
-    <canvas id="canvas" width="500" height="500">
 
-    </canvas>
+    <main>
+        <div class="canvas-container">
+            <h2>Animação com Canvas</h2>
+            <canvas id="canvas" width="500" height="500"></canvas>
+            <p class="canvas-info">Mova o mouse sobre o canvas!</p>
+        </div>
+    </main>
+
     <script src="6script.js"></script>
 </body>
+
 </html>
