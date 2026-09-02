@@ -1,34 +1,3 @@
-<div align="center">
-
-<p align="center">
-  <img src="atividade-principal/imagens/logo%20urubu.png" alt="Logo" width="120">
-</p>
-
-# Atividade Fullstack — 1º Semestre
-
-<strong>Portfólio de atividades de Desenvolvimento Fullstack.</strong>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white" alt="HTML5">
-  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white" alt="CSS3">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black" alt="JavaScript">
-  <img src="https://img.shields.io/badge/Canvas_API-FF6F00?style=flat" alt="Canvas API">
-  <img src="https://img.shields.io/badge/Responsive-Design-blueviolet?style=flat" alt="Responsive Design">
-</p>
-
-<p align="center">
-  <a href="#preview">Preview</a> ·
-  <a href="#atividades">Atividades</a> ·
-  <a href="#provas">Provas</a> ·
-  <a href="#estrutura">Estrutura</a> ·
-  <a href="#tech-stack">Tech Stack</a> ·
-  <a href="#rodando">Rodando</a>
-</p>
-
-</div>
-
----
-
 Repositório com todas as atividades práticas, simulado e prova do primeiro semestre da faculdade de Desenvolvimento Fullstack. Cada atividade demonstra uma competency diferente de front-end web development, desde HTML semântico e CSS com flexbox/grid até Canvas API e manipulação do DOM com JavaScript vanilla.
 
 > **Dica:** para testar a página de formulários (Atividade 8), que faz requisições para `/inicio` e `/cadastro`, é necessário um servidor backend. O arquivo `Servidor.zip` contém a implementação do servidor.
